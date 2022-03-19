@@ -1,0 +1,22 @@
+#runtime: java
+#env: flex
+#runtime_config:
+#  jdk: openjdk8
+#handlers:
+#  - url: /.*
+#    script: this field is required, but ignored
+#resources:
+#  cpu: 2
+#  memory_gb: 2.0
+
+runtime: java11
+instance_class: F4_1G
+#runtime_config:
+#  jdk: openjdk8
+#handlers:
+#  - url: /.*
+#    script: this field is required, but ignored
+#resources:
+#  cpu: 2
+#  memory_gb: 2.0
+#
