@@ -7,4 +7,6 @@ import java.math.BigDecimal;
 public class PaidRequest {
     private Long pawnid;
     private BigDecimal paid_amount;
+    private BigDecimal pawn_amount;
+    private BigDecimal payable_amount;
 }

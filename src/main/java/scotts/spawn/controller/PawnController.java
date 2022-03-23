@@ -7,6 +7,7 @@ import scotts.spawn.entitiy.Pawn;
 import scotts.spawn.service.OnlinePaymentService;
 import scotts.spawn.service.PawnService;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin(maxAge = 3600)
@@ -61,12 +62,15 @@ public class PawnController {
                     Pawn updatedPawn = pawnService.savePawn(ExsistingData);
 
                     OnlinePayments onlinePayments = new OnlinePayments();
-                    onlinePayments.setPaidAmount(paidRequest.get(i).getPaid_amount());
+                    onlinePayments.setPaidamount(paidRequest.get(i).getPaid_amount());
                     onlinePayments.setPawnId(paidRequest.get(i).getPawnid());
+                    onlinePayments.setPawn_amount(paidRequest.get(i).getPawn_amount());
+                    onlinePayments.setPayable_amount (paidRequest.get(i).getPayable_amount());
                     onlinePayments.setBankref(bankref);
                     onlinePayments.setMobile(mobile);
+                    onlinePayments.setServerdate(LocalDateTime.now());
+                    onlinePayments.setPaid_date(LocalDateTime.now());
                     onlinePaymentService.SavePaymnet(onlinePayments);
-
 
                 }
             }
