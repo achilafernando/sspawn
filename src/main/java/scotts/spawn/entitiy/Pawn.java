@@ -79,7 +79,7 @@ public class Pawn {
                 if  (HalfMonthDays>0){
                     nMonths+=1;
                 }
-                interestRate = 2.45;
+                interestRate = 2.85;
                 interestRate=(interestRate*nMonths);
 
                 this.interestDollars= this.Balance.doubleValue() *(interestRate/100) ;
@@ -95,26 +95,26 @@ public class Pawn {
             if(HalfMonthDays<3){
                 HalfMonthRate=0;
             }else if (HalfMonthDays<8){
-                HalfMonthRate=1;
+                HalfMonthRate=1.2;
             }else if(HalfMonthDays<16){
-                HalfMonthRate=1.7;
+                HalfMonthRate=2;
             }else if(HalfMonthDays<24){
-                HalfMonthRate=2.1;
+                HalfMonthRate=2.5;
             }else   {
-                HalfMonthRate=2.45;
+                HalfMonthRate=2.85;
             }
-            interestRate = 2.45;
+            interestRate = 2.85;
             interestRate=(interestRate*nMonths)+HalfMonthRate;
         }
         else{
             if (nDays<8){
                 if (Total.doubleValue()<5001 ){
-                    interestRate = 2.45;
+                    interestRate = 2.85;
                 }else{
-                    interestRate = 0.75;
+                    interestRate = 0.9;
                 }
             }else{
-                interestRate = 2.45;
+                interestRate = 2.85;
             }
         }
 
