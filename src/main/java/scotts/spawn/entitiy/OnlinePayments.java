@@ -29,7 +29,6 @@ public class OnlinePayments {
     private LocalDateTime serverdate;
     private int status;
     private BigDecimal paidamount;
-    private  String bankref;
-
+    private String bankref;
 
 }
