@@ -99,6 +99,7 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <mainClass>scotts.spawn.SpawnApplication</mainClass>
                 </configuration>
             </plugin>
 
